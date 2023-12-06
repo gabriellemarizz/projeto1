@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+
+header {
+            display: flex;
+            width: 110%;
+            height: 200px;
+            background-color:goldenrod;
+            color: black;
+            margin: 0%;
+            padding: 0%;
+        }
+        .logo1 {
+            display: flex;
+            width: 25%;
+            height: 365px;
+            margin-top: -75px;
+            margin-right: -5%;
+            margin-left: -60px;
+        }
+        .menu {
+            width: 100%;
+            height: 50px;
+            margin-top: 50px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .menu ul {
+            list-style: none;
+            position: relative;
+        }
+        .menu ul li {
+            width: 150px;
+            float: left;
+        }
+        .menu a {
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background-color:rgb(88, 38, 15);
+            border-radius: 5px;
+            color: #fff;
+            margin: 5px;
+            border: 4px solid #ccc;
+        }
+                
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu a:hover {
+            background-color: sienna;
+            color:#fff;
+        }
+
+        .menu ul ul li {
+        float: none;
+        border-bottom: solid 1px #ccc;
+        }
+
+        .menu ul ul li a {
+        background-color:rgb(88, 38, 15);
+        }
+
+        label[for=”bt_menu”]{
+            padding: 5px;
+            background-color: #222;
+            color: #fff;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            height: 50px;
+        }
+
+        #bt_menu {
+            display: none;
+        }
+
+        label[for=”bt_menu”]{
+            display: none;
+        }
+
+        @media(max-width: 800px) {
+            label[for=”bt_menu”] {
+            display: block;
+        }
+        
+        #bt_menu:checked ~ .menu{
+            margin-left: 0;
+        }
+        
+        .menu{
+            margin-top: 5px;
+            margin-left: -100%;
+            transition: all .2s;
+        }
+        
+        .menu ul li {
+          width: 100%;
+            float: none;
+        }
+        
+        .menu ul ul {
+            position: static;
+            overflow: hidden;
+            max-height: 0;
+            transition: all 2s;
+        }
+        
+        .menu ul li:hover ul {
+            height: auto;
+            max-height: 200px;
+        }
+        
+        }
+        .divBusca {
+            display: flex;
+            border: 5px solid #ccc;
+            border-radius:10px;
+            width:300px;
+            margin-right: 10%;
+            height:45px;
+            float:inline-end;
+            margin-right: -350px;
+            margin-top: -45px;
+            justify-items: center;
+            align-items: center;
+        }
+        #txtBusca{
+            display: flex;
+            float:right;
+            background-color:transparent;
+            padding-left:5px;
+            font-size:15px;
+            border:none;
+            margin-left: 5px;
+            height:32px;
+            text-decoration: #ccc;
+            width:191px;  
+            align-items: center;
+        }
+
+        #btnBusca{
+            display: flex;
+            align-items: center;
+            border:none;
+            float:right;
+            height: 45px;
+            border-radius:0 6px 6px 0;
+            width:102px;
+            font-weight:bold;
+            background-color:rgb(116, 141, 72);
+            color: black;    
+            text-align: center;
+            justify-content: center;    
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color:black;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            width: 100%;
+            height: 70vh;
+            background-image: linear-gradient(to right, darkgreen,rgb(65, 128, 65));
+            background-image: linear-gradient(to left,darkgreen,rgb(65, 128, 65));
+        }
+        .formLogin {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            background-color:chocolate;
+            border-radius: 10px;
+            border: 5px solid darkslateblue;
+            padding: 40px;
+            box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+            gap: 5px
+        }
+
+        .areaLogin img {
+            width: 420px;
+        }
+
+        .formLogin h1 {
+            padding: 0;
+            font-weight: 500;
+            font-size: 2.3em;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+        }
+        .areaLogin img {
+            width: 420px;
+        }
+
+        .formLogin h1 {
+            padding: 0;
+            margin: 0;
+            font-weight: 500;
+            font-size: 2.3em;
+        }
+        .formLogin input {
+            padding: 15px;
+            font-size: 14px;
+            border: 1px solid bisque;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            border-radius: 4px;
+            transition: all linear 160ms;
+            outline: none;
+        }
+        .formLogin input:focus {
+            border: 1px solid #f72585;
+        }
+
+        .formLogin label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .formLogin a {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #555;
+            transition: all linear 160ms;
+        }
+
+        .formLogin a:hover {
+            color: #f72585;
+        }
+
+        .btn {
+            background-color: sienna;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            border: none !important;
+            transition: all linear 160ms;
+            cursor: pointer;
+            margin: 0 !important;
+
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color:rgb(192, 122, 90);
+
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <img class="logo1" src="4ce57692-f12d-4767-b25f-4b00d66c357f.png">
+        <div class="menus1">
+            <input type="checkbox" id="bt_menu" />
+            <label for="bt_menu">&#9776;</label>
+          <nav class="menu">
+                <ul>
+                    <li><a href="book.html">O Book</a></li>
+                    <li><a href="#">Pra você</a>
+                        <ul>
+                            <li><a href="categorias.html">Categorias</a></li>
+                            <li><a href="app.html">App</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html" id="login1">Login</a>
+                    <li><a href="avalie.html">Avalie</a>
+                </ul>
+            </nav>
+            <div class="divBusca">
+                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                <button id="btnBusca" submit="txtBusca">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page">
+        <form method="POST" class="formLogin">
+            <h1>Login</h1>
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Digite seu e-mail" />
+            <a href="/" style="margin-left: 150px; color:black;">Esqueci minha senha</a>
+            <input type="submit" value="Acessar" class="btn" />
+        </form>
+    </div>
+</body>
+</html>

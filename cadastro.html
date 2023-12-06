@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se!</title>
+
+    <style>
+        .cadastro {
+            display: flex;
+            background-color:rgb(17, 67, 17);
+            width: 100%;
+            height: 850px;
+        }
+        #retangulo {
+            display: flex;
+            background-color:goldenrod;
+            width: 30%;
+            height: 700px;
+            margin-left: 35%;
+            margin-top: 5%;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid black;
+            border-radius: 20px;
+            box-shadow: 15px 25px 45px rgba(0, 0, 0, 0.4);
+        }
+        .inputs {
+            display: flexbox;
+            height: 40px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+        #caixa1 {
+            display: flex;
+            width: 70%;
+            height: 25px;
+            border: 0px;
+            margin-bottom: 8px;
+            margin-top: -3%;
+            justify-content: center;
+            align-items: center;
+            margin-left: 55px;
+            background-color:bisque;
+            text-decoration: aliceblue;
+            border-radius: 15px;
+            padding: 2px;
+        }
+        #caixa2 {
+            display: flex;
+            width: 70%;
+            height: 25px;
+            margin-bottom: 8px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 55px;
+            background-color:bisque;
+            text-decoration: aliceblue;
+            border-radius: 15px;
+            border: 0px;
+            padding: 2px;
+        }
+        #caixa3 {
+            display: flex;
+            width: 70%;
+            height: 25px;
+            margin-bottom: 8px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 55px;
+            background-color:bisque;
+            text-decoration: aliceblue;
+            border-radius: 15px;
+            border: 0px;
+            padding: 2px;
+        }
+        #caixa4 {
+            display: flex;
+            width: 70%;
+            height: 25px;
+            margin-bottom: 8px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 55px;
+            background-color:bisque;
+            text-decoration: aliceblue;
+            border-radius: 15px;
+            border: 0px;
+            padding: 2px;
+        }
+        #caixa5 {
+            display: flex;
+            width: 70%;
+            height: 25px;
+            margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 55px;
+            background-color:bisque;
+            text-decoration: aliceblue;
+            border-radius: 15px;
+            padding: 2px;
+        }
+        #bntEnviar {
+            display: flex;
+            width: 40%;
+            height: 45px;
+            margin-top: -60px;
+            border: 5px solid black;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: sienna;
+            color: black;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            margin-left: 53px;
+        }
+        
+        #bntEnviar:hover  {
+            height: 50px;
+            max-height: 200px;
+            background-color:rgb(192, 122, 90);
+        }
+
+        #bntDeletar:hover  {
+            height: 50px;
+            max-height: 200px;
+            background-color:rgb(192, 122, 90);
+        }
+
+        #bntDeletar {
+            display: flex;
+            width: 25%;
+            height: 45px;
+            margin-top: 20px;
+            border: 5px solid black;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: sienna;
+            color: black;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            margin-left: 250px;
+        }   
+        .logo {
+            display: flex;
+            width: 70%;
+            margin-top: -85%;
+            margin-left: 65px;
+        }
+       span {
+        margin: 0%;
+       }
+       #s6 {
+        margin-bottom: 15px;
+       }
+       #s5 {
+        margin-bottom: 13px;
+       }
+       #s1 {
+        margin-top: -30px;
+        margin-bottom: 15px;
+       }
+       #s2, #s3, #s4, #s5 {
+        margin-top: -5px;
+       }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="cadastro">
+            <div id="retangulo">
+                <div class="inputs">
+                    <img class="logo" src="58c069a2-5c78-4538-adec-77e2f7c779f4.png">
+                    <form action="">
+                        <label for="Name">
+                            <span id="s1" style="padding: 3px; display: flex; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 55px; ">Nome:</span>
+                            <input type="text" id="caixa1" name="name">
+                        </label>
+            
+                        <label for="Name">
+                            <span id="s2" style=" padding: 3px;display: flex; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 55px; ">Número:</span>
+                            <input type="text" id="caixa2" name="numero">
+                        </label>
+
+                        <label for="Name">
+                            <span id="s3" style="padding: 3px;display: flex; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 55px; ">E-mail:</span>
+                            <input type="text" id="caixa3" name="e-mail">
+                        </label>
+
+                        <label for="Name">
+                            <span id="s4" style="padding: 4px;display: flex; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 55px; ">Endereço:</span>
+                            <input type="text" id="caixa4" name="endereço">
+                        </label>
+
+                        <label for="Name">
+                            <span id="s5" style="padding: 3px;display: flex; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 55px; ">CPF:</span>
+                            <input type="text" id="caixa1" name="cpf">
+                        </label>
+
+                        <label for="Name">
+                            <span id="s6" style="padding: 3px;display: flex; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 55px; ">Nascimento:</span>
+                            <input type="text" id="caixa1" name="data">
+                        </label>
+                        <input type="submit" value="Delete" id="bntDeletar">
+                        <button id="bntEnviar"><a>Cadastrar</a></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

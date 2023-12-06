@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalie!</title>
+
+    <style>
+                header {
+            display: flex;
+            width: 110%;
+            height: 200px;
+            background-color:goldenrod;
+            color: black;
+            margin: 0%;
+            padding: 0%;
+        }
+        .logo1 {
+            display: flex;
+            width: 25%;
+            height: 365px;
+            margin-top: -75px;
+            margin-right: -5%;
+            margin-left: -60px;
+        }
+        .menu {
+            width: 100%;
+            height: 50px;
+            margin-top: 50px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .menu ul {
+            list-style: none;
+            position: relative;
+        }
+        .menu ul li {
+            width: 150px;
+            float: left;
+        }
+        .menu a {
+            padding: 15px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background-color:rgb(88, 38, 15);
+            border-radius: 5px;
+            color: #fff;
+            margin: 5px;
+            border: 4px solid #ccc;
+        }
+                
+        .menu ul ul {
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .menu a:hover {
+            background-color: sienna;
+            color:#fff;
+        }
+
+        .menu ul ul li {
+        float: none;
+        border-bottom: solid 1px #ccc;
+        }
+
+        .menu ul ul li a {
+        background-color:rgb(88, 38, 15);
+        }
+
+        label[for=”bt_menu”]{
+            padding: 5px;
+            background-color: #222;
+            color: #fff;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            height: 50px;
+        }
+
+        #bt_menu {
+            display: none;
+        }
+
+        label[for=”bt_menu”]{
+            display: none;
+        }
+
+        @media(max-width: 800px) {
+            label[for=”bt_menu”] {
+            display: block;
+        }
+
+        #bt_menu:checked ~ .menu{
+            margin-left: 0;
+        }
+
+        .menu{
+            margin-top: 5px;
+            margin-left: -100%;
+            transition: all .2s;
+        }
+
+        .menu ul li {
+        width: 100%;
+            float: none;
+        }
+
+        .menu ul ul {
+            position: static;
+            overflow: hidden;
+            max-height: 0;
+            transition: all 2s;
+        }
+
+        .menu ul li:hover ul {
+            height: auto;
+            max-height: 200px;
+        }
+
+        }
+        .divBusca {
+            display: flex;
+            border: 5px solid #ccc;
+            border-radius:10px;
+            width:300px;
+            margin-right: 10%;
+            height:45px;
+            float:inline-end;
+            margin-right: -350px;
+            margin-top: -45px;
+            justify-items: center;
+            align-items: center;
+        }
+        #txtBusca{
+            display: flex;
+            float:right;
+            background-color:transparent;
+            padding-left:5px;
+            font-size:15px;
+            border:none;
+            margin-left: 5px;
+            height:32px;
+            text-decoration: #ccc;
+            width:191px;  
+            align-items: center;
+        }
+
+        #btnBusca{
+            display: flex;
+            align-items: center;
+            border:none;
+            float:right;
+            height: 45px;
+            border-radius:0 6px 6px 0;
+            width:102px;
+            font-weight:bold;
+            background-color:rgb(116, 141, 72);
+            color: black;    
+            text-align: center;
+            justify-content: center;    
+        }
+        section {
+            display: flex;
+            background-color:rgb(165, 135, 121);
+            width: 100%;
+            height: 600px;
+        }
+        .retangulo {
+            display: flex;
+            background-color:rgb(38, 69, 38);
+            width: 30%;
+            height: 400px;
+            margin-left: 35%;
+            margin-top: 5%;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid black;
+            border-radius: 20px;
+            box-shadow: 15px 25px 45px rgba(0, 0, 0, 0.4);
+        }
+        .inputs {
+            display: flexbox;
+            height: 40px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            color:#fff;
+        }
+        #caixa1 {
+            display: flex;
+            width: 70%;
+            height: 25px;
+            border: 0px;
+            margin-bottom: 8px;
+            margin-top: -3%;
+            justify-content: center;
+            align-items: center;
+            margin-left: 45px;
+            background-color:bisque;
+            text-decoration: aliceblue;
+            border-radius: 15px;
+            padding: 2px;
+        }
+        #caixa2 {
+            display: flex;
+            width: 70%;
+            height: 25px;
+            margin-bottom: 8px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 45px;
+            background-color:bisque;
+            text-decoration: aliceblue;
+            border-radius: 15px;
+            border: 0px;
+            padding: 2px;
+        }
+        #caixa3 {
+            display: flex;
+            width: 70%;
+            height: 25px;
+            margin-bottom: 8px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 45px;
+            background-color:bisque;
+            text-decoration: aliceblue;
+            border-radius: 15px;
+            border: 0px;
+            padding: 2px;
+        }
+        #bntEnviar {
+            display: flex;
+            width: 40%;
+            height: 45px;
+            margin-top: -60px;
+            border: 5px solid black;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: sienna;
+            color: black;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            margin-left: 53px;
+            margin-right: 10px;
+        }
+        
+        #bntEnviar:hover  {
+            height: 50px;
+            max-height: 200px;
+            background-color:rgb(192, 122, 90);
+        }
+
+        #bntDeletar:hover  {
+            height: 50px;
+            max-height: 200px;
+            background-color:rgb(192, 122, 90);
+        }
+
+        #bntDeletar {
+            display: flex;
+            width: 25%;
+            height: 45px;
+            margin-top: 20px;
+            border: 5px solid black;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: sienna;
+            color: black;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            margin-left: 170px;
+        }   
+        .logo {
+            display: flex;
+            width: 70%;
+            margin-top: -85%;
+            margin-left: 65px;
+        }
+       span {
+        margin: 0%;
+       }
+       #s1 {
+        margin-top: -30px;
+        margin-bottom: 15px;
+       }
+    </style>
+
+</head>
+<body>
+    <header>
+        <img class="logo1" src="4ce57692-f12d-4767-b25f-4b00d66c357f.png">
+        <div class="menus1">
+            <input type="checkbox" id="bt_menu" />
+            <label for="bt_menu">&#9776;</label>
+          <nav class="menu">
+                <ul>
+                    <li><a href="book.html">O Book</a></li>
+                    <li><a href="#">Pra você</a>
+                        <ul>
+                            <li><a href="categorias.html">Categorias</a></li>
+                            <li><a href="app.html">App</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html" id="login1">Login</a>
+                    <li><a href="avalie.html">Avalie</a>
+                </ul>
+            </nav>
+            <div class="divBusca">
+                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                <button id="btnBusca" submit="txtBusca">Buscar</button>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="retangulo">
+            <form action="">
+                <label for="Name">
+                    <span id="s1" style="padding: 3px; display: flex; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 55px; ">Nome:</span>
+                    <input type="text" id="caixa1" name="name">
+                </label>
+    
+                <label for="Name">
+                    <span id="s3" style="padding: 3px;display: flex; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 55px; ">E-mail:</span>
+                    <input type="text" id="caixa3" name="e-mail">
+                </label>
+    
+                <label for="Name">
+                    <span id="s2" style=" padding: 3px;display: flex; font-size: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-left: 55px; ">Número:</span>
+                    <input type="text" id="caixa2" name="avalie-nos">
+                </label>
+    
+                <input type="submit" value="Delete" id="bntDeletar">
+                <button id="bntEnviar"><a>Enviar</a></button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
